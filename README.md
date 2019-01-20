@@ -3,12 +3,34 @@ uncomplicated firewall management bash scripts
 
 # Scripts
 ## geolite2.sh
-* Deny from IPv4/IPv6 hosts by Countries
+Deny from IPv4/IPv6 hosts by Countries
+
+### Variables
 * `countries="1814991"`: China
 * `countries="1814991|2017370"`: China, Russia
-* `sudo bash geolite2.sh`
+
+### Run
+```
+sudo bash geolite2.sh
+```
+
+### Crontab Example
+2:10 AM 15th of every month 
+
+```
+10 2 15 * * /bin/bash /home/pincoin/ufw/geolite2.sh
+```
 
 ## ssh-postgres.sh
-* Allow from trusted hosts
-* `sudo bash ssh-postgres.sh allow 192.168.0.1`
-* `sudo bash ssh-postgres.sh disallow 192.68.0.1`
+Allow/Disallow from whitelist
+
+### Run
+Allow
+```
+sudo bash ssh-postgres.sh allow 192.168.0.1
+```
+
+Disallow
+```
+sudo bash ssh-postgres.sh disallow 192.68.0.1
+```
