@@ -1,7 +1,7 @@
+
 # ufw
 uncomplicated firewall management bash scripts
 
-# Scripts
 ## geolite2.sh
 Deny from IPv4/IPv6 hosts by Countries
 
@@ -40,3 +40,9 @@ Disallow
 ```
 sudo bash allow-whitelist.sh disallow 192.68.0.1
 ```
+
+# GeoLite2-Country.mmdb
+## update-geolite2.sh
+Update GeoLite2-Country.mmdb file periodically
+
+### Run
