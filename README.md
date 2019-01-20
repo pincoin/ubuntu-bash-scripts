@@ -18,7 +18,7 @@ sudo bash geolite2.sh
 2:10 AM 15th of every month 
 
 ```
-10 2 15 * * /bin/bash /home/pincoin/ufw/geolite2.sh
+10 2 15 * * /bin/bash /path/to/geolite2.sh
 ```
 
 ## ssh-postgres.sh
