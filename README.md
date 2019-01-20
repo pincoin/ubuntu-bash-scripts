@@ -2,7 +2,7 @@
 # UFW
 uncomplicated firewall management bash scripts
 
-## geolite2.sh
+## block-countries.sh
 Deny from IPv4/IPv6 hosts by Countries
 
 ### Variables
@@ -11,14 +11,13 @@ Deny from IPv4/IPv6 hosts by Countries
 
 ### Run
 ```
-sudo bash geolite2.sh
+sudo bash block-countries.sh
 ```
 
 ### Crontab Example
 2:10 AM 15th of every month 
-
 ```
-10 2 15 * * /bin/bash /path/to/geolite2.sh
+10 2 15 * * /bin/bash /path/to/block-countries.sh > /var/log/block-countries.log 2>&1
 ```
 
 ## allow-whitelist.sh
@@ -47,5 +46,11 @@ Update GeoLite2-Country.mmdb file periodically
 
 ### Run
 ```
-/bin/bash update-geolite2.sh /path/to/dest >/dev/null 2>&1
+/bin/bash update-geolite2.sh /path/to/dest > /var/log/geolite2.log 2>&1
+```
+
+### Crontab Example
+2:10 AM 15th of every month
+```
+10 2 15 * * /bin/bash /path/to/update-geolite2.sh /path/to/dest > /var/log/geolite2.log 2>&1
 ```
