@@ -1,5 +1,5 @@
 
-# ufw
+# UFW
 uncomplicated firewall management bash scripts
 
 ## geolite2.sh
