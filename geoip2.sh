@@ -18,6 +18,7 @@ ufw enable
 ufw allow 'Nginx Full'
 
 # Download GeoLite2 and Unzip
+cd "$(dirname "$0")";
 rm -rf GeoLite2-Country-CSV*
 wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country-CSV.zip
 unzip GeoLite2-Country-CSV.zip
