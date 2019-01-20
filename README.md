@@ -24,6 +24,12 @@ sudo bash geolite2.sh
 ## ssh-postgres.sh
 Allow/Disallow from whitelist
 
+### Variables
+Change the following default ports into your private ports
+```
+PORTS=("22" "5432")
+```
+
 ### Run
 Allow
 ```
