@@ -26,11 +26,11 @@ date > started.txt
 cd GeoLite2-Country-CSV_*
 
 # Block IPv4
-grep -E $countries GeoLite2-Country-Blocks-IPv4.csv | awk -F ',' '{print $1}' | xargs -t -I % sudo ufw insert 1 deny from % to any
+grep -E $countries GeoLite2-Country-Blocks-IPv4.csv | awk -F ',' '{print $1}' | xargs -t -I % ufw insert 1 deny from % to any
 
 # Block IPv6
 position=$(ufw status numbered | grep '(v6)' | awk 'NR>1{print $1}' RS=[ FS=] | sort -n | head -1)
-grep -E $countries GeoLite2-Country-Blocks-IPv6.csv | awk -F ',' '{print $1}' | xargs -t -I % sudo ufw insert $position deny from % to any
+grep -E $countries GeoLite2-Country-Blocks-IPv6.csv | awk -F ',' '{print $1}' | xargs -t -I % ufw insert $position deny from % to any
 
 cd ..
 date > finished.txt
