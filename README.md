@@ -46,3 +46,6 @@ sudo bash allow-whitelist.sh disallow 192.68.0.1
 Update GeoLite2-Country.mmdb file periodically
 
 ### Run
+```
+/bin/bash update-geolite2.sh /path/to/dest >/dev/null 2>&1
+```
