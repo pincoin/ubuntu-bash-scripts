@@ -21,7 +21,7 @@ sudo bash geolite2.sh
 10 2 15 * * /bin/bash /path/to/geolite2.sh
 ```
 
-## ssh-postgres.sh
+## allow-whitelist.sh
 Allow/Disallow from whitelist
 
 ### Variables
@@ -33,10 +33,10 @@ PORTS=("22" "5432")
 ### Run
 Allow
 ```
-sudo bash ssh-postgres.sh allow 192.168.0.1
+sudo bash allow-whitelist.sh allow 192.168.0.1
 ```
 
 Disallow
 ```
-sudo bash ssh-postgres.sh disallow 192.68.0.1
+sudo bash allow-whitelist.sh disallow 192.68.0.1
 ```
