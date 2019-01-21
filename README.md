@@ -54,3 +54,18 @@ Update GeoLite2-Country.mmdb file periodically
 ```
 10 2 15 * * /bin/bash /path/to/update-geolite2.sh /path/to/dest > /var/log/geolite2.log 2>&1
 ```
+
+# Django Deployment
+## deploy-django.sh
+Deploy django application and restarts it.
+
+### Run
+```
+sudo /bin/bash deploy-django.sh username
+```
+
+## update-repo.sh
+Pull source codes from GIT repository
+
+### Run
+This script is called by `deploy-django.sh`.
