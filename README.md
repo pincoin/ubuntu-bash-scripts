@@ -2,22 +2,12 @@
 # UFW
 uncomplicated firewall management bash scripts
 
-## block-countries.sh
-Deny from IPv4/IPv6 hosts by Countries
-
-### Variables
-* `countries="1814991"`: China
-* `countries="1814991|2017370"`: China, Russia
+## allow-cloudflare.sh
+Deny All but Allow from Cloudflare
 
 ### Run
 ```
-sudo bash block-countries.sh
-```
-
-### Crontab Example
-2:10 AM 15th of every month 
-```
-10 2 15 * * /bin/bash /path/to/block-countries.sh > /var/log/block-countries.log 2>&1
+sudo bash allow-cloudflare.sh
 ```
 
 ## allow-whitelist.sh
@@ -38,6 +28,24 @@ sudo bash allow-whitelist.sh allow 192.168.0.1
 Disallow
 ```
 sudo bash allow-whitelist.sh disallow 192.68.0.1
+```
+
+## block-countries.sh
+Deny from IPv4/IPv6 hosts by Countries
+
+### Variables
+* `countries="1814991"`: China
+* `countries="1814991|2017370"`: China, Russia
+
+### Run
+```
+sudo bash block-countries.sh
+```
+
+### Crontab Example
+2:10 AM 15th of every month 
+```
+10 2 15 * * /bin/bash /path/to/block-countries.sh > /var/log/block-countries.log 2>&1
 ```
 
 # GeoLite2-Country.mmdb
